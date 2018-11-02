@@ -1,0 +1,284 @@
+(defn pos-neg-or-zero
+  "Determines whether or not n is positive, negative, or zero"
+  [n]
+  (cond
+    (< n 0) "negative"
+    (> n 0) "positive"
+    :else "zero"))
+(pos-neg-or-zero 1)
+(pos-neg-or-zero 0)
+(pos-neg-or-zero -1)
+(loop [x 10]
+  (when (> x 1)
+    (println x)
+    (recur (- x 1))))
+(defn myloop [start end]
+  (loop [start 10]
+    (when (> x 1)
+      (println x)
+      (recur (- x 1))))
+)
+(defn myloop [start end]
+  (loop [start 10]
+    (when (> start 1)
+      (println x)
+      (recur (- start 1))
+    )
+  )
+)
+(defn myloop [start end]
+  (loop [start 10]
+    (when (> start 1)
+      (println start)
+      (recur (- start 1))
+    )
+  )
+)
+(myloop 10)
+(myloop 10 8)
+(myloop 9 8)
+(defn myloop [start end]
+  (loop [x start]
+    (when (> x 1)
+      (println x)
+      (recur (- x 1))))
+)
+(myloop 8(defn myloop [start end]
+  (loop [x start]
+    (when (> x 1)
+      (println x)
+      (recur (- x 1))))
+)
+(defn myloop [start end]
+  (loop [x start]
+    (when (> x 1)
+      (println x)
+      (recur (- x 1))))
+)
+(myloop 9 8)
+(myloop 12 8)
+(defn myloop [start end]
+  (loop [x start]
+    (when (and (> x 1) (< x end))
+      (println x)
+      (recur (- x 1))))
+)
+(myloop 9 8)
+(defn myloop [start end]
+  (loop [x start]
+    (when (> x 1)
+      (println x)
+      (recur (- x 1))))
+)
+(myloop 9 8)
+(defn myloop [start end]
+  (loop [x start]
+    (when (> x 0)
+      (println x)
+      (recur (- x 1))))
+)
+(myloop 9 8)
+(defn myloop [start end]
+  (loop [x start]
+    (when (or (> x 0) (= x 0))
+      (println x)
+      (recur (- x 1))))
+)
+(myloop 9 8)
+(defn myloop [start end]
+  (loop [x start]
+    (when (> x end)
+      (println x)
+      (recur (- x 1))))
+)
+(myloop 9 8)
+(myloop 9 5)
+(defn myloop [start end]
+  (loop [x start]
+    (when (or (> x end) (= x end))
+      (println x)
+      (recur (- x 1))))
+)
+(myloop 9 7)
+(defn run-length-decode [cipher-text]
+  "" cipher-text "opa"
+)
+(run-length-decode 9)
+(defn run-length-decode [cipher-text]
+  "" (str cipher-text) "opa"
+)
+(run-length-decode 9)
+(frequencies "Isabela")
+(type (frequencies "Isabela"))
+(loop [x (frequencies "Isabela")] (println x))
+(type (frequencies "Isabela"))
+(array-map (frequencies "Isabela"))
+(frequencies "Isabela")
+(type (frequencies "Isabela"))
+(count (frequencies "Isabela"))
+(map (print x) (frequencies "Isabela"))
+(map print (frequencies "Isabela"))
+(map println (frequencies "Isabela"))
+(map (map println (frequencies "Isabela")))
+(map println (map println (frequencies "Isabela")))
+(map first (map println (frequencies "Isabela")))
+(map first (frequencies "Isabela"))
+(map second (frequencies "Isabela"))
+(and
+  (map second (frequencies "Isabela"))
+  (map first (frequencies "Isabela"))  
+)
+(
+  (map second (frequencies "Isabela"))
+  (map first (frequencies "Isabela"))  
+)
+(map second (frequencies "Isabela"))
+(str (map second (frequencies "Isabela")))
+(apply str (map second (frequencies "Isabela")))
+(apply str (map second (frequencies "aabbbcccc")))
+(clojure.string/split (apply str (map first (frequencies "aabbbcccc"))) #"")
+(clojure.string/split (apply str (map second (frequencies "aabbbcccc"))) #"")
+(clojure.string/split (apply str (map first (frequencies "aabbbcccc"))) #"")
+(clojure.string/split (apply str (map second (frequencies "aabbbcccc"))) #"")
+(interpose [1 2] [3 4])
+(interpose 1 [3 4])
+(interpose 1 [3 5 4])
+(clojure.string/split (apply str (map second (frequencies "aabbbcccc"))) #"")
+(interleave [1 2] [3 4])
+(interleave
+  (clojure.string/split (apply str (map first (frequencies "aabbbcccc"))) #"")
+  (clojure.string/split (apply str (map second (frequencies "aabbbcccc"))) #"")
+)
+(interleave
+  (clojure.string/split (apply str (map second (frequencies "aabbbcccc"))) #"")
+  (clojure.string/split (apply str (map first (frequencies "aabbbcccc"))) #"")
+)
+(apply str (interleave
+  (clojure.string/split (apply str (map second (frequencies "aabbbcccc"))) #"")
+  (clojure.string/split (apply str (map first (frequencies "aabbbcccc"))) #"")
+))
+(apply str (interleave (repeat "a")
+  (clojure.string/split (apply str (map second (frequencies plain-text))) #"")
+  (clojure.string/split (apply str (map first (frequencies plain-text))) #"")
+))
+(apply str (interleave
+  (clojure.string/split (apply str (map second (frequencies "XYZ"))) #"")
+  (clojure.string/split (apply str (map first (frequencies "XYZ"))) #"")
+))
+(defn swap [s]
+  case s
+  "1" ""
+  s
+)
+(defn swap [s]
+  (case s
+  "1" ""
+  s)
+)
+(swap 9)
+(swap "1")
+(map swap
+    (clojure.string/split (apply str (map second (frequencies "XYZ"))) #"")
+  )
+(apply str (interleave
+  (map swap
+    (clojure.string/split (apply str (map second (frequencies "XYZ"))) #"")
+  )
+  (clojure.string/split (apply str (map first (frequencies "XYZ"))) #"")
+))
+(defn run-length-encode [plain-text]
+  (apply str (interleave
+    (map swap
+      (clojure.string/split (apply str (map second (frequencies plain-text))) #"")
+    )
+    (clojure.string/split (apply str (map first (frequencies plain-text))) #"")
+  ))
+)
+(apply str (interleave
+  (map swap
+    (clojure.string/split (apply str (map second (frequencies "XYZ"))) #"")
+  )
+  (clojure.string/split (apply str (map first (frequencies "XYZ"))) #"")
+))
+(apply str (interleave
+  (map swap
+    (clojure.string/split (apply str (map second (frequencies "XYZ"))) #"")
+  )
+  (clojure.string/split (apply str (map first (frequencies "XYZ"))) #"")
+))
+(apply str (interleave
+  (map swap
+    (clojure.string/split (apply str (map second (frequencies "AABBBCCCC"))) #"")
+  )
+  (clojure.string/split (apply str (map first (frequencies "AABBBCCCC"))) #"")
+))
+(apply str (interleave
+  (map swap
+    (clojure.string/split (apply str (map second (frequencies "2 hs2q q2w2 "))) #"")
+  )
+  (clojure.string/split (apply str (map first (frequencies "2 hs2q q2w2 "))) #"")
+))
+(apply str (interleave
+  (map swap
+    (clojure.string/split (apply str (map second (frequencies "2 hs2q q2w2 "))) #"")
+  )
+  (clojure.string/split (apply str (map first (frequencies "2 hs2q q2w2 "))) #"")
+))
+(map swap
+    (clojure.string/split (apply str (map second (frequencies "2 hs2q q2w2 "))) #"")
+  )
+(apply str (interleave
+  (clojure.string/split (apply str (map second (frequencies "2A3B4C"))) #"")
+  (clojure.string/split (apply str (map first (frequencies "2A3B4C"))) #"")
+))
+(apply str (interleave
+  (clojure.string/split (apply str (map second (frequencies "AABBBCCCC"))) #"")
+  (clojure.string/split (apply str (map first (frequencies "AABBBCCCC"))) #"")
+))
+(frequencies "Isabela")
+(frequencies "AABBBCCCC")
+(map second (frequencies "AABBBCCCC"))
+(frequencies "AABBBCCCC")
+(map first (frequencies "2 hs2q q2w2 ")
+)
+(apply str (map second (frequencies "AABBBCCCC")))
+(clojure.string/split (apply str (map second (frequencies "AABBBCCCC"))) #"")
+(interleave (clojure.string/split (apply str (map second (frequencies "AABBBCCCC"))) #"") (clojure.string/split (apply str (map first (frequencies "AABBBCCCC"))) #""))
+(frequencies "Isabela")
+(apply str (interleave
+  (map swap
+    (clojure.string/split (apply str (map second (frequencies "XYZ"))) #"")
+  )
+  (clojure.string/split (apply str (map first (frequencies "XYZ"))) #"")
+))
+(frequencies WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWB)
+(frequencies "WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWB")
+(defn bololo [s]
+  (clojure.string/split s)  
+)
+(bololo "Isabela")
+(defn bololo [s]
+  (clojure.string/split s #"")  
+)
+(bololo "isabela")
+(defn myjoin [y] (fn [x] (join x y)))
+(defn myjoin [y] (fn [x] (clojure.string/join x y)))
+(myjoin 3)
+((myjoin 3) 3)
+(join 3 3)
+((myjoin "3") "3")
+(join "Eu te " "amo")
+(clojure.string/join "Eu te " "amo")
+(clojure.string/concat "Eu te " "amo")
+(clojure.string/concat "3" "3")
+(clojure.string/join "3" "3")
+(clojure.string/str "3" "3")
+(str "3" "3")
+((defn myjoin [y] (fn [x] (str x y)))
+)
+(defn myjoin [y] (fn [x] (str x y)))
+((myjoin 3) 3)
+(((myjoin 3) 3) 3)
+(defn myjoin [y] (fn [x] (str (str x y) x)))
+(myjoin 3)
+((myjoin 3)3)

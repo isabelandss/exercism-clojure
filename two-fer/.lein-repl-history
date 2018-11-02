@@ -1,0 +1,24 @@
+(or "" 0)
+(defn two-fer [name]
+  (str "One for you, "(or name "you")" one for me.")
+)
+  (two-fer "Isabela")
+(defn two-fer [name]
+  (str "One for "(or name "you")", one for me.")
+)
+(two-fer "Isabela")
+(two-fer)
+(defn two-fer [name?]
+  (str "One for "(or name "you")", one for me.")
+)
+(two-fer "Isabela")
+(two-fer "")
+(defn two-fer [name]
+  (str "One for "(or name "you")", one for me.")
+)
+(two-fer "")
+(or "" "you")
+(defn two-fer [[name]]
+  (str "One for "(or name "you")", one for me.")
+)
+(two-fer "Isabela")

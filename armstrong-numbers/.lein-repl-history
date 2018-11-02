@@ -1,0 +1,19 @@
+(defn expoDigits [a] 
+  (map (expo (count (seq (str num)))) a)
+)
+  (map (expo (count (seq (str num)))) a)
+(defn expo [x] (fn [y] (Math/pow x y)))
+(defn expoDigits [a] 
+  (map (expo (count (seq (str num)))) a)
+)
+(expoDigits 123)
+(expoDigits "123")
+(expoDigits [1 2 3])
+(defn countDigits [num] (count (seq (str num))))
+(countDigits 123)
+(defn countDigits [num] (count (seq (str num))))
+(countDigits 123)
+(defn expoDigits [a] 
+  (map (expo (count (seq (str num)))) a)
+)
+exit
